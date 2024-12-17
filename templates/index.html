@@ -2,27 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News Scraper</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Selector</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome, {{ name }}</h1>
-    <form action="/scrape" method="post">
-        <label for="countries">Select Countries:</label><br>
-        <input type="checkbox" name="countries" value="us"> US<br>
-        <input type="checkbox" name="countries" value="gb"> UK<br>
-        <input type="checkbox" name="countries" value="ca"> Canada<br><br>
-
-        <label for="categories">Select Categories:</label><br>
-        <input type="checkbox" name="categories" value="business"> Business<br>
-        <input type="checkbox" name="categories" value="technology"> Technology<br>
-        <input type="checkbox" name="categories" value="sports"> Sports<br><br>
-
-        <label for="max_articles">Max Articles:</label><br>
-        <input type="number" name="max_articles" value="50"><br><br>
-
-        <input type="submit" value="Get News">
-    </form>
-    <a href="/logout">Logout</a>
+    <div class="container">
+        <h1>Welcome, waqar555</h1>
+        <form>
+            <div class="section">
+                <label>Select Countries:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="country" value="US"> US</label>
+                    <label><input type="checkbox" name="country" value="UK"> UK</label>
+                    <label><input type="checkbox" name="country" value="Canada"> Canada</label>
+                </div>
+            </div>
+            <div class="section">
+                <label>Select Categories:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="category" value="Business"> Business</label>
+                    <label><input type="checkbox" name="category" value="Technology"> Technology</label>
+                    <label><input type="checkbox" name="category" value="Sports"> Sports</label>
+                </div>
+            </div>
+            <div class="section">
+                <label>Max Articles:</label>
+                <input type="number" name="max-articles" value="50">
+            </div>
+            <button type="submit">Get News</button>
+        </form>
+    </div>
 </body>
 </html>
