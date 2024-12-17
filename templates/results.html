@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scraped News</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Scraped News</h1>
+    <ul>
+        {% for article in articles %}
+        <li>
+            <strong>{{ article.title }}</strong> - {{ article.source }}<br>
+            <a href="{{ article.url }}" target="_blank">Read more</a><br>
+            <p>{{ article.description }}</p>
+            <p>{{ article.content }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

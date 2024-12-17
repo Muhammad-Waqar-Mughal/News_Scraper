@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome, {{ name }}</h1>
+    <form action="/scrape" method="post">
+        <label for="countries">Select Countries:</label><br>
+        <input type="checkbox" name="countries" value="us"> US<br>
+        <input type="checkbox" name="countries" value="gb"> UK<br>
+        <input type="checkbox" name="countries" value="ca"> Canada<br><br>
+
+        <label for="categories">Select Categories:</label><br>
+        <input type="checkbox" name="categories" value="business"> Business<br>
+        <input type="checkbox" name="categories" value="technology"> Technology<br>
+        <input type="checkbox" name="categories" value="sports"> Sports<br><br>
+
+        <label for="max_articles">Max Articles:</label><br>
+        <input type="number" name="max_articles" value="50"><br><br>
+
+        <input type="submit" value="Get News">
+    </form>
+    <a href="/logout">Logout</a>
+</body>
+</html>

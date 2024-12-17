@@ -1,0 +1,72 @@
+body {
+    background-image: url('/static/myp.jpg');
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    color: #0066cc;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 350px; /* Increased width */
+    padding: 20px;
+    background: rgba(247, 78, 78, 0.9); /* Slightly more transparent */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="checkbox"] {
+    width: calc(100% - 20px); /* Adjusted width to fit better */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #004d99;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
